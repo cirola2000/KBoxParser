@@ -47,10 +47,10 @@ public class Main {
 		// // load dbpedia files from latest dbpedia dataID
 		 KBoxParser parser = new DataIDFileParser(DBPEDIA_DATAID_ADDRESS);
 
-//		 List<KnsMetadata> metadataList = parser.readKNSList();
+		 List<KnsMetadata> metadataList = parser.readKNSList();
 //
-//		 extractorServices.persistence().save(metadataList);
-		List<KnsMetadata> metadataList = extractorServices.persistence().load();
+		 extractorServices.persistence().save(metadataList);
+//		List<KnsMetadata> metadataList = extractorServices.persistence().load();
 
 		List<KnsTable> knsTable = new ArrayList<>();
 

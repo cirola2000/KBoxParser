@@ -1,2 +1,2 @@
 # KBoxParser
-An framework to create knowledge graphs using KBox
+A framework to create knowledge graphs using KBox

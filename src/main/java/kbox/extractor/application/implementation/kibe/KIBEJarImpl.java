@@ -38,7 +38,7 @@ public class KIBEJarImpl implements KBoxKIBE {
 	@Override
 	public void createIndex(String indexName, String sourceFoder, String destFolder, String tmpFolder) {
 		String command = "java -Djava.io.tmpdir="+tmpFolder+ " -jar " + BASE_PATH
-				+ "kbox-v0.0.1-alpha2.jar -createIndex " + sourceFoder;
+				+ "kbox-v0.0.1-alpha.jar -createIndex " + sourceFoder;
 		logger.debug(executeCommand(command));
 		command = "mv "+BASE_PATH+"kbox.kb " + destFolder + indexName + ".kb";
 

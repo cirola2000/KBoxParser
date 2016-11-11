@@ -86,6 +86,22 @@ public class KnsTable {
 		return publisher;
 	}
 	
+	/**
+	 * @return the size
+	 */
+	public long getSize() {
+		return size;
+	}
+	
+	/**
+	 * @param size 
+	 * Set the size value.
+	 */
+	public void setSize(long size) {
+		this.size = size;
+	}
+	
+	
 	
 
 }

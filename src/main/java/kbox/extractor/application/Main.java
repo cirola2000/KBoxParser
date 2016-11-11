@@ -74,11 +74,13 @@ public class Main {
 						ParserProperties.DBPEDIA_INDEX_PATH, ParserProperties.INDEX_PATH);
 
 				logger.info("Removing dataset file.");
-				new File(ParserProperties.DBPEDIA_INDEX_PATH + "/" + knsTargetName).delete();
+				new File(ParserProperties.TMP_DOWNLOAD_PATH + "/" + knsTargetName).delete();
+
 
 				knsTable.add(new KnsTable(k.getTitle(),
 						"http://vmdbpedia.informatik.uni-leipzig.de:3031/dbpedia/" + k.getLocalKNSPath() + ".kb",
-						k.getDesc(), k.getPublisher()));
+						k.getDesc(), k.getPublisher(), new File(ParserProperties.DBPEDIA_INDEX_PATH + "/" + knsTargetName).length()));
+
 
 				logger.info("Processing for " + knsTargetName + " is done. ");
 

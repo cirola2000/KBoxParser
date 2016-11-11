@@ -19,14 +19,17 @@ public class KnsTable {
 	
 	String publisher;
 	
+	long size;
 	
 	
-	public KnsTable(String name, String target, String description, String publisher) {
+	
+	public KnsTable(String name, String target, String description, String publisher,long size) {
 		super();
 		this.name = name;
 		this.target = target;
 		this.description = description;
 		this.publisher = publisher;
+		this.size= size;
 	}
 	
 	

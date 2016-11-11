@@ -40,7 +40,7 @@ public class KIBEJarImpl implements KBoxKIBE {
 		String command = "java -Djava.io.tmpdir="+tmpFolder+ " -jar " + BASE_PATH
 				+ "kbox-v0.0.1-alpha.jar -createIndex " + sourceFoder;
 		logger.debug(executeCommand(command));
-		command = "mv "+BASE_PATH+"kbox.kb " + destFolder + indexName + ".kb";
+		command = "mv kbox.kb " + destFolder + indexName + ".kb";
 
 		logger.debug(executeCommand(command));
 	}

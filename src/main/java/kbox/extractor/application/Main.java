@@ -64,7 +64,7 @@ public class Main {
 				k.setLocalKNSPath(knsTargetName);
 
 				// stream dataset
-				logger.info("Streaming dataset: " + k.getDownloadURL().toString());
+				logger.info("Streaming dataset: " + k.getDownloadURL().toString() + " to local file "+ ParserProperties.TMP_DOWNLOAD_PATH + "/" + knsTargetName);
 				extractorServices.streaming().saveUrl(ParserProperties.TMP_DOWNLOAD_PATH + "/" + knsTargetName,
 						k.getDownloadURL().toString(), true);
 

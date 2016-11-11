@@ -47,10 +47,10 @@ public class Main {
 		// // load dbpedia files from latest dbpedia dataID
 		 KBoxParser parser = new DataIDFileParser(DBPEDIA_DATAID_ADDRESS);
 
-//		 List<KnsMetadata> metadataList = parser.readKNSList();
+		 List<KnsMetadata> metadataList = parser.readKNSList();
 //
-		// extractorServices.persistence().save(metadataList);
-		List<KnsMetadata> metadataList = extractorServices.persistence().load();
+		 extractorServices.persistence().save(metadataList);
+//		List<KnsMetadata> metadataList = extractorServices.persistence().load();
 
 		List<KnsTable> knsTable = new ArrayList<>();
 
@@ -78,7 +78,7 @@ public class Main {
 
 				long indexSize = new File(ParserProperties.DBPEDIA_INDEX_PATH + "/" + knsTargetName+ ".kb").length();
 
-				logger.debug("Index size for file  " + ParserProperties.DBPEDIA_INDEX_PATH + "/" + knsTargetName + ".bk is "+indexSize);
+				logger.debug("Index size for file  " + ParserProperties.DBPEDIA_INDEX_PATH + "/" + knsTargetName + ".kb is "+indexSize);
 				
 				knsTable.add(new KnsTable(k.getTitle(),
 						"http://vmdbpedia.informatik.uni-leipzig.de:3031/dbpedia/" + k.getLocalKNSPath() + ".kb",

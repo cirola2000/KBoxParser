@@ -11,6 +11,11 @@
 	<description>This framework provide a set of interfaces and implementations which aims parsing 
 	RDF description files (like DCAT, VoiID, etc) and using KBox for generating knowledge graphs.</description>
 
+	<properties>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
+	</properties>
+
 
 	<dependencies>
 		<dependency>

@@ -54,7 +54,6 @@ public class Main {
 
 		List<KnsTable> knsTable = new ArrayList<>();
 
-		int i = 0;
 		// update the KNSTarget name
 		for (KnsMetadata k : metadataList) {
 			try {
@@ -91,8 +90,6 @@ public class Main {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			if (i++ == 3)
-				break;
 		}
 
 		extractorServices.persistence().save(metadataList);

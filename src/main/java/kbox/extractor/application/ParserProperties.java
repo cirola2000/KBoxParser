@@ -7,6 +7,8 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
 
+import org.apache.log4j.PropertyConfigurator;
+
 /**
  * General properties of the application. Most of them are 
  * set in the config file.
@@ -20,6 +22,7 @@ public class ParserProperties {
 	 */
 	public void loadProperties() {
 		Properties prop = new Properties();
+		PropertyConfigurator.configure("resources/log4j.properties");
 		InputStream inputStream = null;
 		try {
 			String propFileName = "resources/config.properties";
